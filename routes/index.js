@@ -1,18 +1,13 @@
 // 1.
 const router = require('express').Router();
 
-// 2. Import our modular routers for /tips and /feedback
-// const tipsRouter = require('./tips');
-// const feedbackRouter = require('./feedback');
-// const diagnosticsRouter = require('./diagnostics');
+// 2. Import our modular routers 
+const notesRouter = require('./notes');
 
-// 3. 
-// const app = express();
 
 // 4.
-// app.use('/tips', tipsRouter);
-// app.use('/feedback', feedbackRouter);
-// app.use('/diagnostics', diagnosticsRouter);
+app.use('/notes', notesRouter);
+
  
 // 5.
 module.exports = router;
