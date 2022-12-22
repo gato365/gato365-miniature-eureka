@@ -1,6 +1,9 @@
 [
     {
-        "title":"Test Title",
-        "text":"Test text"
+        "title": "Test Title",
+        "text": "Test text"
+    },
+    {
+        "note_id": "dc1feb7c-7b54-46cf-82b1-57bef7620046"
     }
 ]

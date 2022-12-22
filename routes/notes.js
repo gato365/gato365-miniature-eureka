@@ -1,6 +1,7 @@
+// 1. Load Libraries
 const notes = require('express').Router();
 const { v4: uuidv4 } = require('uuid');
-// 2. 
+// 2. Load local modules
 const {
   readFromFile,
   readAndAppend,
@@ -46,13 +47,12 @@ notes.delete('/:note_id', (req, res) => {
 notes.post('/', (req, res) => {
   console.log(req.body);
 
-  const { username, topic, note } = req.body;
+  const { title, text } = req.body;
 
   if (req.body) {
     const newnote = {
-      username,
-      note,
-      topic,
+      title,
+      text,
       note_id: uuidv4(),
     };
 
