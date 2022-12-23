@@ -5,7 +5,7 @@ const path = require('path');
 // 2. Load Local modules
 const { clog } = require('./middleware/clog');
 const api = require('./routes/index.js');
-const db = require("./config/connection");
+// const db = require("./config/connection");
 
 
 // 3. Load Port
@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 
 // 5. Import custom middleware, "cLog"
-// app.use(clog);
+app.use(clog);
 
 // 6. Middleware for parsing JSON and urlencoded form data
 app.use(express.json());
