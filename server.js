@@ -28,15 +28,11 @@ app.use(express.static('public'));
 //8. Get pages
 
 // 8a. GET Route for homepage
-app.get('/', async (req, res) =>{
-  db.query("SELECT 1+1 AS num", (error,result)=>{
-    res.json(result);
-  });
-
-
+app.get('/',  (req, res) =>{
   
-  // res.sendFile(path.join(__dirname, '/public/index.html'));
-});
+  res.sendFile(path.join(__dirname, '/public/index.html'))
+}
+);
 
 // 8b. GET Route for notes page
 app.get('/notes', (req, res) =>
