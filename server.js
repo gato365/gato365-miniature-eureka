@@ -5,6 +5,7 @@ const path = require('path');
 // 2. Load Local modules
 const { clog } = require('./middleware/clog');
 const api = require('./routes/index.js');
+const db = require("./config/connection");
 
 
 // 3. Load Port
@@ -27,9 +28,15 @@ app.use(express.static('public'));
 //8. Get pages
 
 // 8a. GET Route for homepage
-app.get('/', (req, res) =>
-  res.sendFile(path.join(__dirname, '/public/index.html'))
-);
+app.get('/', async (req, res) =>{
+  db.query("SELECT 1+1 AS num", (error,result)=>{
+    res.json(result);
+  });
+
+
+  
+  // res.sendFile(path.join(__dirname, '/public/index.html'));
+});
 
 // 8b. GET Route for notes page
 app.get('/notes', (req, res) =>
