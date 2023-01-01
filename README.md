@@ -6,3 +6,12 @@ The primary purpose of this project was for me to learn how routes work with the
 
 ### Diagram
 <img src = "public/assets/images/diagram.jpg" width="65%" height="35%"> 
+
+
+### Deployment
+
+#### Heroku
+https://gato365-miniature-eureka-eman.herokuapp.com/
+
+#### GitHub
+https://gato365.github.io/gato365-miniature-eureka/
